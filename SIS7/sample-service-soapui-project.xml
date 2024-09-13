@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="a5bca1c0-304d-4193-8be2-70f5f474c07c" activeEnvironment="Default" name="sample-service" resourceRoot="" soapui-version="5.7.2" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="5e271c3d-fc7b-4d1a-9fbf-bddf05a2a75a" wadlVersion="http://research.sun.com/wadl/2006/10" name="sample-service" type="rest" basePath="/" definitionUrl="file:/C:/Users/Lenovo/SoapUI-Tutorials/WSDL-WADL/sample-service.wadl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/Lenovo/SoapUI-Tutorials/WSDL-WADL/sample-service.wadl"><con:part><con:url>file:/C:/Users/Lenovo/SoapUI-Tutorials/WSDL-WADL/sample-service.wadl</con:url><con:content><![CDATA[<application xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="http://research.sun.com/wadl/2006/10">
+  <doc xmlns:smartbear="http://www.smartbear.com/"/>
+  <resources base="http://localhost:8080/">
+    <resource path="accountcreation">
+      <method name="GET" id="viewAccountRegistration">
+        <doc xml:lang="en" title="Register a new account">The account register service can be used to fill in account registration forms.</doc>
+        <response>
+          <representation mediaType="text/html"/>
+        </response>
+      </method>
+      <method name="POST" id="createUserAccount">
+        <doc xml:lang="en" title="Register a new account">Creating the account after having filled in the registration form.</doc>
+        <request>
+          <param type="xs:string" style="query" name="username" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc>The username</doc>
+          </param>
+          <param type="xs:string" style="query" name="password" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc>The password</doc>
+          </param>
+          <representation mediaType="application/json"/>
+        </request>
+        <response>
+          <representation mediaType="text/html"/>
+        </response>
+      </method>
+    </resource>
+  </resources>
+</application>]]></con:content><con:type>http://research.sun.com/wadl/2006/10</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080</con:endpoint></con:endpoints><con:resource name="accountcreation" path="accountcreation" id="e2090ade-93f2-489b-b996-f253ec4d51d0"><con:settings/><con:parameters/><con:method name="Register a new account - viewAccountRegistration" id="c2d0a363-b5e8-4ad4-b142-09d1a4b6d40c" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>text/html</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="d28b0ec0-7902-46c4-8482-cbb8f8a8d74c" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method><con:method name="Register a new account - createUserAccount" id="2f8c3adf-5832-412f-857e-94acd460220c" method="POST"><con:settings/><con:parameters><con:parameter><con:name>username</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:default xsi:nil="true"/></con:parameter><con:parameter><con:name>password</con:name><con:value xsi:nil="true"/><con:style>QUERY</con:style><con:default xsi:nil="true"/></con:parameter></con:parameters><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>text/html</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="ded1265b-7992-4aca-9314-484398814caf" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8080</con:endpoint><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
